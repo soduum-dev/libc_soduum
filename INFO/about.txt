@@ -1,1 +1,3 @@
-Libraryes for C language, dynamic lists, strings and other from C++ but in C 
+Libraryes for C language, dynamic lists, strings and other from C++ but in C
+
+Everywhere there is the soduum bcse C dont have namespaces:(
