@@ -74,8 +74,9 @@ bool soduum_cstr_equals(struct soduum_cstr *f, struct soduum_cstr *s) {
 
 
 
-// soduum_charArrayBytesEquals that return where is false returned
+// soduum_charArray_bytesEquals that return where is false returned
 struct soduum_where { unsigned long i; bool is_there; };
+/*
 struct soduum_where soduum_charArrayBytesEquals(char *f, char *s) {
 	unsigned long i = 0;
 	struct soduum_where res = {0, false}
@@ -92,6 +93,13 @@ struct soduum_where soduum_charArrayBytesEquals(char *f, char *s) {
 	res.i = i;	
 	return res;
 } //idk
+*/
+
+struct soduum_where soduum_charArray_findSubArray(char *arr, char *subArr) {
+
+	struct soduum_where = {0, true};
+
+}
 
 
 
