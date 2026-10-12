@@ -9,3 +9,5 @@ All names or units must be in namespace soduum. Examples:
 If file in 'this' direcotry, that file must use files from only 'this' directory. It like this because often you don't need to include all lib, often you need only strings, 
 	or only strings and allocators.
 
+Create, Init, Destroy, From:
+create in namespace named by type name like cstr_create is create object what type is cstr. from is argument name in function's define in code. destroy destroy object good way(create is like constructor in c++). Init i dont use in names, because in C abi standart implicit pointer to struct gives to function if it return big struct anyway, its means cstr_create has a self-ptr too, but implicit, and i start to confused when i think about it. if you need to do something with created object i think i write function with name reinit, reassign or recreate. 

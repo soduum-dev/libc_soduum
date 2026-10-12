@@ -1,3 +1,22 @@
 Libraryes for C language, dynamic lists, strings and other from C++ but in C
 
 Everywhere there is the soduum bcse C dont have namespaces:(
+
+There is readme.md file anyway, what for i 
+writed this?..
+
+(Oh yeah, small about docs information)
+
+COMMIT MESSAGE:
+
+strings:
+	Now, i work on strings. Allocators, lists after.
+
+
+allocaotrs:
+	I started write allocators after i started make
+	strings. Because of this arena allocated
+	string, lists and other will be rewritten in
+	this direcotry for arena. Maybe i give a choice:
+	function use arena or malloc, but i dont know,
+	i am just planning.

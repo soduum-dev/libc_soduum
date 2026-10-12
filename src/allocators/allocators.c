@@ -4,14 +4,14 @@
 struct soduum_arena {
 
 	void *heap;
-	bool alive = true;
+	bool alive = true; // for future
 	unsigned long logicLen;
 	unsigned long len;
 
 
 };
 
-struct soduum_arena soduum_arena_init(unsigned long size) {
+struct soduum_arena soduum_arena_create(unsigned long size) {
 	struct soduum_arena arena = {
 		malloc(size), false,
 		0, size 
@@ -40,8 +40,54 @@ struct soduum_arena soduum_arena_copy(struct soduum_arena *from) {
 
 }
 
-void soduum_arena_distruct(struct soduum_arena *self) { 
+void soduum_arena_destroy(struct soduum_arena *self) { 
 	free(self->heap); // self->heap = NULL not help, if you use what was free u have an logic error you 100% will need to fix it 
 }
+
+
+
+void *ptr soduum_arena_malloc(struct soduum_allocator *self, unsigned long logicSize) {}
+
+void soduum_arena_freeAll(struct soduum_allocator *self) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
