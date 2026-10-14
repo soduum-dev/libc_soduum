@@ -7,11 +7,17 @@ unsigned long soduum_charArray_getLenght(char *arr) {
         unsigned long i = 0;
         for (; arr[i] != '\0'; i++) {}
         return i;
-} // work
+}
 
+// better version of getLenght but string must not be ended on \0. Just function what get you index where is \n to switch to \n
+// anyway all lib have the rule => ALL CHAR ARRAYS WHAT WILL GOING TO TRANSFORM TO CSTR MUST BE \0, AND IN CSTR OBJECT CAHR ARRAY 
+// 	ENDING AT \0
+unsigned long soduum_charArray_getLenghtWithConfiguredEnd(char *arr, char end) {
+	unsigned long i = 0;
+	for (; arr[i] != 'end'; i++) {} return i;
+}
 
-
-// equal char array bytes
+// equal char array
 bool soduum_charArray_equals(char *f, char *s) {
         unsigned long i = 0;
         while (f[i] != '\0') {
@@ -20,35 +26,30 @@ bool soduum_charArray_equals(char *f, char *s) {
         }
         if (s[i] != '\0') { return false; }
         return true;
-} //work
-
-
-
-
-// soduum_charArray_bytesEquals that return where is false returned 
-struct soduum_where { unsigned long i; bool isThere; }; 
- 
-struct soduum_where soduum_charArray_BytesEqualAndStop(char *arr, char *sub) {
-
-	struct soduum_where stop = {0, true};
-	
-	for (unsigned long i = 0; arr[stop.i] == sub[i]; stop.i++) { i++; }
-	// warning lenght of 
 }
 
+struct soduum_cstr_where { 
+	bool isFinded // is there something
+	unsigned long pos, // where is something
+};
 
-struct soduum_where soduum_charArray_findSubArray(char *arr, char *subArr) { 
- 
-        struct soduum_where where = {0, true};
-
-	for (unsigned long i = 0; subArr[i] != '\0'; i++) {
-
-		if (arr[where.i] == subArr[i]) { where.i++; where.isThere = true; }
-		else { where.isThere = false; }
-
+unsigned long soduum_charArray_TryFind(char *sub, char *in) {
+	unsigned long i = 0;
+	while (true) {
+	curInSub = sub[i];
+	curInIn = in[
+		if ( curInSub != '\0' ) {
+			if ( curInSub ) {}
 		
-	}	
+		}
+	
+	}
 
-} 
- 
+}
 
+struct soduum_cstr_where soduum_charArray_find(char *sub, char *in) {
+
+	struct soduum_cstr_where where;
+	
+
+}

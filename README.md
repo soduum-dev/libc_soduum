@@ -6,4 +6,5 @@
 - new ideas for features are welcome!
 - the goal is to make a cool library for C
 
+## *READ /INFO!*
 enjoy using it!

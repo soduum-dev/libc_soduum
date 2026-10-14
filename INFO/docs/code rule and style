@@ -1,13 +1,62 @@
 Using "_" cymvol for namespace divide.
+
 If you need to write two word at namepsace unit or in name just write nex word with up register.
+
 If unit namespace or name is for inside lib usage only, unit's or name's first word must be start from up register. If it so, unit or name what start from up register is 
 	should be "hideen" from user. Its not functions or structs for user's lib's header (.h), user couldnt find there something for his code, is divide for lib code 
 	inside device and lib's tool for user. But if you need something "hidden", it's opensourse. Its just divide for coder and convenience.
+
 All names or units must be in namespace soduum. Examples: 
-	void soduum_myNamespace_myFunction();
+	" void soduum_myNamespace_myFunction(); "
 	(I dont want to show off, only for divide all this from other functions and structs and other libs, it is a good practice)
+
 If file in 'this' direcotry, that file must use files from only 'this' directory. It like this because often you don't need to include all lib, often you need only strings, 
 	or only strings and allocators.
 
 Create, Init, Destroy, From:
-create in namespace named by type name like cstr_create is create object what type is cstr. from is argument name in function's define in code. destroy destroy object good way(create is like constructor in c++). Init i dont use in names, because in C abi standart implicit pointer to struct gives to function if it return big struct anyway, its means cstr_create has a self-ptr too, but implicit, and i start to confused when i think about it. if you need to do something with created object i think i write function with name reinit, reassign or recreate. 
+	create in namespace named by type name like cstr_create is create object what type is cstr. from is argument name in function's define in code. destroy destroy 
+	object good 
+	way(create is like constructor in c++). Init i dont use in names, because in C abi standart implicit pointer to struct gives to function if it return big struct 
+	anyway, its means cstr_create has a self-ptr too, but implicit, and i start to confused when i think about it. if you need to do something with created object i 
+	think i write function 
+	with name reinit, reassign or recreate. 
+	Destroy could return true if resources was free, because it make know to us was they free or not. I think it could be useful.
+
+Comments:
+	NECESSARILY:
+	make a comment after open { to explain what function do. this comment must be right after { on same line with it.
+	if function is not stable (work bad), make after the close } // BAD
+	elif function in test phase, after } should be // TESTING(BETA or ALPHA)
+	else, do nothing, keep coding.
+	this comment must be right after } in same line with it.
+	or just write all this on top before function declare. Just do like that please or we could not read this spagetti. 
+	examples: 
+	"	// DEV: cool_dev
+		// REQUEST: after >>>data<<< >>>request could be small "REQ" btw*
+		struct big somespace_hardToGetIt()
+		{ // MEANING: this function is quantum uncertainty about people's certainty is too muxhxdxd..
+		  // col jok... (cool joke) 
+		  // PROBLEMS: not funny >>>PRB*
+			>>>code
+			more code
+			
+			.....
+
+
+			<<<
+		} // ALPHA
+
+
+
+		>>>short
+		// DEV: cool_dev
+		// REQ: after >>data
+		// MEANING: if string is too big return false
+		// PRB: i dont know about for cicle
+		bool leng(char *ptr) { >>>code<<< } // BAD
+				 
+	PLEASE:
+	if you added something do comment on top of code of function, variable or struct, it will give us better navigation on project. If there is no comment on top, it 
+	written by me :)
+	OTHER:
+	just write them okay. I try write them good too, but you know i think.
